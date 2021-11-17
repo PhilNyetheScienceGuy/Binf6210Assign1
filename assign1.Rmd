@@ -216,7 +216,6 @@ map('world',col="#e1e1e1", fill=TRUE, bg="white", lwd=0.05,mar=rep(0,4),border=0
 
 
 #Modeling the dissimilarity index values from the vegdist() as the line width connecting the respective points on the map. To do so, I'm exponentiating the dissimilarity index values with base 10 so that they translate into functional numeric input for the lwd option in the lines function. 
-#Placed results data frame creation here before the map, since then the dissimilarity values can be obtained straight from this data set, by creating a vector that takes all the values to the power of 10. This makes the code more general, just in case you wanted to explore other values and would not have to input those values again into the code.
 
 results.names <- c("NAWC & NAEC", "NAWC & Europe", "NAWC & Asia", "Europe & NAEC", "Asia & NAEC", "Asia & Europe")
 results <- data.frame(cbind(results.names, abun.dist.sig))
